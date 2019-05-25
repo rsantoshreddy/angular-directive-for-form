@@ -1,0 +1,32 @@
+<div>
+  <h1>Address Form</h1>
+  <form>
+    <div class="form-group">
+      <input type="text" name="agencyName" ng-model="address.name" />
+    </div>
+    <div class="form-group">
+      <input type="text" name="addressLine1" ng-model="address.addressLine1" />
+    </div>
+    <div class="form-group"><input type="text" name="addressLine2" ng-model="address.addressLine2" /></div>
+    <div class="form-group"><input type="text" name="city" ng-model="address.city" /></div>
+    <div class="form-group">
+      <select name="state" id="state" ng-model="address.state">
+        <option ng-repeat="state in states" value="{{ state.name }}">{{ state.name }}</option>
+      </select>
+    </div>
+    <div class="form-group"><input type="text" name="pincode" ng-model="address.pincode" /></div>
+    <div class="form-group">
+      <p>Is your agency providing residencial treatment</p>
+      <input type="radio" name="provideResTreatment" ng-model="address.isResident" value="yes" /> Yes
+      <input type="radio" name="provideResTreatment" ng-model="address.isResident" value="no" /> No
+    </div>
+    <div class="form-group">
+      <p>Billing Address</p>
+      <input type="checkbox" ng-model="address.isbillAdd" value="Yes" />
+    </div>
+
+    <div class="form-group"><input type="text" name="phone" ng-model="address.phone" /></div>
+
+    <div class="form-group"><input type="text" name="exten" ng-model="address.exten" /></div>
+  </form>
+</div>
